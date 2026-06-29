@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Spectra Media Studio — Photography, Videography & Drone Studio in Pune</title>
+<meta name="description" content="Spectra Media is Pune's premier creative studio. Photography, videography, drone cinematography, podcast shoots, and studio rental in Balewadi, Pune. 500+ shoots. 350+ happy clients." />
+<meta property="og:title" content="Spectra Media Studio — Pune's Creative Studio" />
+<meta property="og:description" content="Photography, videography, drone, podcast and studio rental in Balewadi, Pune. 500+ shoots. Book your session today." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://spectramedia.in" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://spectramedia.in" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Spectra Media Studio",
+  "description": "Creative photography, videography, drone, podcast and studio rental in Pune",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "M 1001, PARK XPRESS, Balewadi High St, opposite Cummins Pvt Ltd",
+    "addressLocality": "Baner, Pune",
+    "addressRegion": "Maharashtra",
+    "postalCode": "411045",
+    "addressCountry": "IN"
+  },
+  "telephone": "+919028094087",
+  "email": "spectramediastudio@gmail.com",
+  "openingHours": "Mo-Su 10:00-20:00",
+  "url": "https://spectramedia.in"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0d0c0a;
+  --paper:#f5f0e8;
+  --gold:#c9a84c;
+  --gold-light:#e8d49a;
+  --rust:#b85c38;
+  --teal:#3a7d74;
+  --white:#ffffff;
+  --gray-mid:#888780;
+  --gray-light:#d3d1c7;
+  --display:'Cormorant Garamond',serif;
+  --body:'DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ink);
+  color:var(--paper);
+  font-family:var(--body);
+  font-weight:300;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.25rem 2.5rem;
+  transition:background 0.4s ease, backdrop-filter 0.4s ease;
+}
+nav.scrolled{
+  background:rgba(13,12,10,0.88);
+  backdrop-filter:blur(12px);
+  border-bottom:0.5px solid rgba(201,168,76,0.15);
+}
+.nav-logo{
+  font-family:var(--display);
+  font-size:1.1rem;
+  font-weight:600;
+  letter-spacing:0.15em;
+  color:var(--paper);
+  text-decoration:none;
+  text-transform:uppercase;
+}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{
+  color:rgba(245,240,232,0.7);
+  text-decoration:none;
+  font-size:0.82rem;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  transition:color 0.2s;
+}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{
+  background:transparent;
+  border:0.5px solid var(--gold);
+  color:var(--gold);
+  padding:0.45rem 1.2rem;
+  font-family:var(--body);
+  font-size:0.8rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  cursor:pointer;
+  text-decoration:none;
+  transition:background 0.2s,color 0.2s;
+}
+.nav-cta:hover{background:var(--gold);color:var(--ink)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:1px;background:var(--paper);transition:all 0.3s}
+.mobile-menu{
+  display:none;position:fixed;top:0;left:0;right:0;bottom:0;
+  background:var(--ink);z-index:200;
+  flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;
+}
+.mobile-menu.open{display:flex}
+.mobile-menu a{
+  font-family:var(--display);font-size:2.5rem;font-weight:400;
+  color:var(--paper);text-decoration:none;letter-spacing:0.05em;
+}
+.mobile-menu a:hover{color:var(--gold)}
+.close-menu{
+  position:absolute;top:1.5rem;right:2rem;
+  background:none;border:none;color:var(--paper);
+  font-size:1.5rem;cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  position:relative;height:100vh;overflow:hidden;
+  display:flex;align-items:flex-end;
+  padding:0 2.5rem 5rem;
+}
+.hero-video{
+  position:absolute;inset:0;
+  object-fit:cover;width:100%;height:100%;
+  opacity:0.45;
+}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top, rgba(13,12,10,0.95) 0%, rgba(13,12,10,0.2) 60%, transparent 100%);
+}
+.hero-content{position:relative;z-index:2;max-width:900px}
+.hero-eyebrow{
+  font-size:0.75rem;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1.5rem;
+}
+.hero-title{
+  font-family:var(--display);
+  font-size:clamp(3.5rem,8vw,7rem);
+  font-weight:600;line-height:1;
+  color:var(--paper);
+  margin-bottom:1.5rem;
+}
+.hero-title em{color:var(--gold);font-style:italic}
+.hero-sub{
+  font-size:1rem;color:rgba(245,240,232,0.65);
+  max-width:480px;margin-bottom:2.5rem;line-height:1.8;
+}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.btn-primary{
+  background:var(--gold);color:var(--ink);
+  padding:0.8rem 2rem;
+  font-family:var(--body);font-size:0.82rem;
+  letter-spacing:0.1em;text-transform:uppercase;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:background 0.2s,transform 0.15s;display:inline-block;
+}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-1px)}
+.btn-ghost{
+  background:transparent;color:var(--paper);
+  padding:0.8rem 2rem;
+  font-family:var(--body);font-size:0.82rem;
+  letter-spacing:0.1em;text-transform:uppercase;
+  text-decoration:none;border:0.5px solid rgba(245,240,232,0.3);cursor:pointer;
+  transition:border-color 0.2s,color 0.2s;display:inline-block;
+}
+.btn-ghost:hover{border-color:var(--paper);color:var(--paper)}
+.hero-scroll{
+  position:absolute;bottom:2rem;right:2.5rem;z-index:2;
+  display:flex;flex-direction:column;align-items:center;gap:0.5rem;
+  font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;
+  color:rgba(245,240,232,0.4);
+}
+.scroll-line{
+  width:0.5px;height:50px;
+  background:linear-gradient(to bottom,var(--gold),transparent);
+  animation:scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse{0%,100%{opacity:0.3}50%{opacity:1}}
+
+/* STATS STRIP */
+.stats-strip{
+  background:var(--gold);
+  display:flex;justify-content:center;flex-wrap:wrap;gap:0;
+  overflow:hidden;
+}
+.stat-item{
+  flex:1;min-width:160px;
+  padding:1.75rem 2rem;
+  text-align:center;
+  border-right:0.5px solid rgba(13,12,10,0.15);
+}
+.stat-item:last-child{border-right:none}
+.stat-num{
+  display:block;
+  font-family:var(--display);font-size:2.2rem;font-weight:700;
+  color:var(--ink);line-height:1;
+}
+.stat-label{
+  display:block;font-size:0.72rem;letter-spacing:0.12em;
+  text-transform:uppercase;color:rgba(13,12,10,0.65);
+  margin-top:0.3rem;
+}
+
+/* SECTION COMMONS */
+section{padding:6rem 2.5rem}
+.section-eyebrow{
+  font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1rem;
+}
+.section-title{
+  font-family:var(--display);font-size:clamp(2rem,4vw,3.5rem);
+  font-weight:600;line-height:1.1;color:var(--paper);
+  margin-bottom:1.5rem;
+}
+.section-body{
+  font-size:0.95rem;color:rgba(245,240,232,0.6);
+  max-width:560px;line-height:1.9;
+}
+.divider{
+  width:40px;height:1px;background:var(--gold);
+  margin:2rem 0;
+}
+
+/* ABOUT */
+.about-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:5rem;align-items:center;max-width:1200px;margin:0 auto;
+}
+.about-img-wrap{position:relative}
+.about-img{
+  width:100%;aspect-ratio:3/4;
+  object-fit:cover;display:block;
+}
+.about-badge{
+  position:absolute;bottom:-1.5rem;right:-1.5rem;
+  background:var(--gold);color:var(--ink);
+  padding:1.5rem;text-align:center;
+  font-family:var(--display);
+}
+.about-badge strong{display:block;font-size:2rem;font-weight:700;line-height:1}
+.about-badge span{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase}
+.about-specs{margin-top:2.5rem;display:flex;flex-direction:column;gap:1rem}
+.spec-row{
+  display:flex;align-items:baseline;gap:1rem;
+  border-bottom:0.5px solid rgba(245,240,232,0.08);
+  padding-bottom:1rem;
+}
+.spec-label{
+  font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--gold);min-width:120px;
+}
+.spec-val{font-size:0.9rem;color:rgba(245,240,232,0.7)}
+
+/* SERVICES */
+.services-section{background:rgba(255,255,255,0.02)}
+.services-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:rgba(245,240,232,0.06);
+  max-width:1200px;margin:3rem auto 0;
+}
+.service-card{
+  background:var(--ink);
+  padding:2.5rem 2rem;
+  position:relative;overflow:hidden;
+  cursor:pointer;
+  transition:background 0.3s;
+}
+.service-card::before{
+  content:'';
+  position:absolute;bottom:0;left:0;
+  width:100%;height:2px;
+  background:var(--gold);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform 0.3s ease;
+}
+.service-card:hover{background:rgba(201,168,76,0.05)}
+.service-card:hover::before{transform:scaleX(1)}
+.service-img{
+  width:100%;height:200px;object-fit:cover;
+  margin-bottom:1.5rem;
+  filter:grayscale(30%);transition:filter 0.3s;
+}
+.service-card:hover .service-img{filter:grayscale(0%)}
+.service-num{
+  font-family:var(--display);font-size:0.8rem;
+  color:var(--gold);letter-spacing:0.15em;
+  margin-bottom:0.75rem;
+}
+.service-name{
+  font-family:var(--display);font-size:1.4rem;
+  font-weight:600;color:var(--paper);
+  margin-bottom:0.75rem;
+}
+.service-desc{font-size:0.85rem;color:rgba(245,240,232,0.55);line-height:1.8}
+
+/* STUDIO SLIDER */
+.studio-section{overflow:hidden}
+.studio-header{max-width:1200px;margin:0 auto 3rem}
+.studio-track{
+  display:flex;gap:1.5rem;
+  animation:slide 30s linear infinite;
+  width:max-content;
+}
+.studio-track:hover{animation-play-state:paused}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.studio-card{
+  width:300px;flex-shrink:0;position:relative;overflow:hidden;
+}
+.studio-card img{
+  width:100%;height:380px;object-fit:cover;display:block;
+  transition:transform 0.5s ease;
+}
+.studio-card:hover img{transform:scale(1.04)}
+.studio-card-label{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(transparent,rgba(13,12,10,0.9));
+  padding:2rem 1.25rem 1.25rem;
+  font-family:var(--display);font-size:1rem;font-weight:600;
+  color:var(--paper);
+}
+
+/* GALLERY */
+.gallery-section{background:rgba(255,255,255,0.015)}
+.gallery-grid{
+  columns:4;gap:1rem;
+  max-width:1200px;margin:3rem auto 0;
+}
+.gallery-item{
+  break-inside:avoid;margin-bottom:1rem;
+  overflow:hidden;position:relative;
+}
+.gallery-item img{
+  width:100%;display:block;
+  transition:transform 0.4s ease,filter 0.4s ease;
+  filter:grayscale(20%);
+}
+.gallery-item:hover img{transform:scale(1.03);filter:grayscale(0%)}
+
+/* CONTACT */
+.contact-section{background:var(--paper);color:var(--ink)}
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:5rem;max-width:1200px;margin:0 auto;
+  align-items:start;
+}
+.contact-section .section-title{color:var(--ink)}
+.contact-section .section-eyebrow{color:var(--rust)}
+.contact-section .section-body{color:rgba(13,12,10,0.6)}
+.contact-section .divider{background:var(--rust)}
+
+.contact-detail{
+  display:flex;align-items:flex-start;gap:1rem;
+  margin-bottom:1.75rem;
+}
+.contact-icon{
+  width:40px;height:40px;
+  border:0.5px solid rgba(13,12,10,0.15);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;font-size:1rem;
+}
+.contact-info strong{
+  display:block;font-size:0.7rem;letter-spacing:0.15em;
+  text-transform:uppercase;color:var(--rust);margin-bottom:0.25rem;
+}
+.contact-info span{font-size:0.9rem;color:rgba(13,12,10,0.7)}
+.contact-form{display:flex;flex-direction:column;gap:1rem}
+.form-field{
+  display:flex;flex-direction:column;gap:0.4rem;
+}
+.form-field label{
+  font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;
+  color:rgba(13,12,10,0.5);
+}
+.form-field input,.form-field textarea,.form-field select{
+  background:transparent;
+  border:none;border-bottom:0.5px solid rgba(13,12,10,0.2);
+  padding:0.75rem 0;
+  font-family:var(--body);font-size:0.9rem;color:var(--ink);
+  outline:none;transition:border-color 0.2s;width:100%;
+}
+.form-field input:focus,.form-field textarea:focus,.form-field select:focus{
+  border-bottom-color:var(--rust);
+}
+.form-field textarea{resize:vertical;min-height:100px}
+.submit-btn{
+  background:var(--ink);color:var(--paper);
+  border:none;padding:1rem 2rem;
+  font-family:var(--body);font-size:0.82rem;
+  letter-spacing:0.1em;text-transform:uppercase;
+  cursor:pointer;transition:background 0.2s;
+  margin-top:0.5rem;align-self:flex-start;
+}
+.submit-btn:hover{background:var(--rust)}
+
+/* MAP */
+.map-section{padding:0}
+.map-section iframe{display:block;width:100%;height:400px;border:none;filter:grayscale(80%) contrast(1.1)}
+
+/* FOOTER */
+footer{
+  background:var(--ink);
+  border-top:0.5px solid rgba(245,240,232,0.06);
+  padding:3rem 2.5rem;
+}
+.footer-inner{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:2rem;
+}
+.footer-logo{
+  font-family:var(--display);font-size:1rem;
+  font-weight:600;letter-spacing:0.15em;
+  color:var(--paper);text-transform:uppercase;
+}
+.footer-links{display:flex;gap:1.5rem;list-style:none;flex-wrap:wrap}
+.footer-links a{
+  font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;
+  color:rgba(245,240,232,0.35);text-decoration:none;
+  transition:color 0.2s;
+}
+.footer-links a:hover{color:var(--gold)}
+.footer-social{display:flex;gap:1rem}
+.social-link{
+  width:36px;height:36px;border:0.5px solid rgba(245,240,232,0.12);
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(245,240,232,0.4);text-decoration:none;font-size:0.85rem;
+  transition:border-color 0.2s,color 0.2s;
+}
+.social-link:hover{border-color:var(--gold);color:var(--gold)}
+.footer-copy{
+  width:100%;text-align:center;
+  font-size:0.72rem;color:rgba(245,240,232,0.18);
+  letter-spacing:0.08em;margin-top:1rem;
+}
+
+/* WHATSAPP FLOAT */
+.wa-float{
+  position:fixed;bottom:2rem;right:2rem;z-index:500;
+  width:54px;height:54px;border-radius:50%;
+  background:#25d366;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(37,211,102,0.4);
+  text-decoration:none;
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.wa-float:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(37,211,102,0.5)}
+.wa-float svg{width:28px;height:28px;fill:#ffffff}
+
+/* FADE IN */
+.fade-up{
+  opacity:0;transform:translateY(24px);
+  transition:opacity 0.7s ease,transform 0.7s ease;
+}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* MOBILE */
+@media(max-width:900px){
+  nav{padding:1rem 1.25rem}
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .hero{padding:0 1.25rem 4rem}
+  .about-grid{grid-template-columns:1fr;gap:3rem}
+  .about-badge{right:0;bottom:-1rem}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr;gap:3rem}
+  section{padding:4rem 1.25rem}
+  .gallery-grid{columns:2}
+  .stats-strip{flex-wrap:wrap}
+  .stat-item{min-width:50%;border-right:none;border-bottom:0.5px solid rgba(13,12,10,0.1)}
+}
+@media(max-width:600px){
+  .services-grid{grid-template-columns:1fr}
+  .gallery-grid{columns:2}
+  .footer-inner{flex-direction:column;align-items:flex-start}
+}
+@media(prefers-reduced-motion:reduce){
+  .studio-track{animation:none}
+  .fade-up{transition:none}
+  .scroll-line{animation:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">Spectra Media</a>
+  <ul class="nav-links">
+    <li><a href="#about">Studio</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/919028094087?text=Hi%2C%20I%27d%20like%20to%20book%20a%20session%20at%20Spectra%20Media" class="nav-cta" target="_blank" rel="noopener">Book a Session</a>
+  <div class="hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-menu" id="closeMenu" aria-label="Close menu">✕</button>
+  <a href="#about" onclick="closeMob()">Studio</a>
+  <a href="#services" onclick="closeMob()">Services</a>
+  <a href="#gallery" onclick="closeMob()">Work</a>
+  <a href="#contact" onclick="closeMob()">Contact</a>
+  <a href="https://wa.me/919028094087?text=Hi%2C%20I%27d%20like%20to%20book%20a%20session%20at%20Spectra%20Media" target="_blank" rel="noopener" style="color:var(--gold)">Book a Session</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="https://res.cloudinary.com/dgxudtvgx/video/upload/v1742827732/Final2_kqgkjh.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Balewadi, Pune &nbsp;·&nbsp; Est. 2023</p>
+    <h1 class="hero-title">Where every<br/><em>frame</em> is<br/>deliberate.</h1>
+    <p class="hero-sub">1200 sq.ft. creative studio. Photography, videography, drone, podcast and more — built for brands that refuse to look ordinary.</p>
+    <div class="hero-actions">
+      <a href="https://wa.me/919028094087?text=Hi%2C%20I%27d%20like%20to%20book%20a%20session%20at%20Spectra%20Media" class="btn-primary" target="_blank" rel="noopener">Book a Session</a>
+      <a href="#services" class="btn-ghost">Explore Services</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stat-item">
+    <strong class="stat-num">500+</strong>
+    <span class="stat-label">Photoshoots Completed</span>
+  </div>
+  <div class="stat-item">
+    <strong class="stat-num">350+</strong>
+    <span class="stat-label">Happy Clients</span>
+  </div>
+  <div class="stat-item">
+    <strong class="stat-num">12+</strong>
+    <span class="stat-label">Awards Won</span>
+  </div>
+  <div class="stat-item">
+    <strong class="stat-num">20+</strong>
+    <span class="stat-label">Podcasts Produced</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img-wrap fade-up">
+      <img class="about-img" src="https://res.cloudinary.com/dgxudtvgx/image/upload/v1741368413/2._ECommerce_ibmcu6.jpg" alt="Spectra Media Studio interior, Balewadi Pune" loading="lazy" />
+      <div class="about-badge">
+        <strong>1200</strong>
+        <span>sq.ft. studio</span>
+      </div>
+    </div>
+    <div class="fade-up">
+      <p class="section-eyebrow">Our Studio</p>
+      <h2 class="section-title">Built for<br/>serious creators.</h2>
+      <div class="divider"></div>
+      <p class="section-body">Spectra Media is Pune's most complete creative production space. Not a converted room. A purpose-built, air-conditioned, fully equipped studio designed around the work.</p>
+      <div class="about-specs" style="margin-top:2rem">
+        <div class="spec-row">
+          <span class="spec-label">Shooting Space</span>
+          <span class="spec-val">400 sq.ft. dedicated area</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Lighting</span>
+          <span class="spec-val">Godox professional photography & videography rigs</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Equipment</span>
+          <span class="spec-val">Full-frame cameras, tripods, microphones, drones</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Facilities</span>
+          <span class="spec-val">Makeup room, changing room, steam iron area</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Backdrops</span>
+          <span class="spec-val">Multiple colours, props, colour gels</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Hours</span>
+          <span class="spec-val">Monday to Sunday, 10am to 8pm</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <div style="max-width:1200px;margin:0 auto">
+    <p class="section-eyebrow fade-up">What We Do</p>
+    <h2 class="section-title fade-up">Six ways we<br/>can work together.</h2>
+  </div>
+  <div class="services-grid fade-up">
+    <div class="service-card">
+      <img class="service-img" src="https://res.cloudinary.com/dgxudtvgx/image/upload/v1741368075/1._Photography_pgparr.jpg" alt="Photography at Spectra Media Pune" loading="lazy" />
+      <p class="service-num">01</p>
+      <h3 class="service-name">Photography</h3>
+      <p class="service-desc">Fashion, ecommerce, portraits, and product shoots — with a full range of backdrops, props, and professional lighting tailored to your brief.</p>
+    </div>
+    <div class="service-card">
+      <img class="service-img" src="https://res.cloudinary.com/dgxudtvgx/image/upload/v1741368074/2._Videography_yqk8ft.jpg" alt="Videography at Spectra Media Pune" loading="lazy" />
+      <p class="service-num">02</p>
+      <h3 class="service-name">Videography</h3>
+      <p class="service-desc">Promotional videos, brand films, and cinematic storytelling — shot with professional equipment, edited to your brand's voice.</p>
+    </div>
+    <div class="service-card">
+      <img class="service-img" src="https://res.cloudinary.com/dgxudtvgx/image/upload/v1741368074/3._Drone_r5p3d7.jpg" alt="Drone cinematography in Pune" loading="lazy" />
+      <p class="service-num">03</p>
+      <h3 class="service-name">Drone Cinematography</h3>
+      <p class="service-desc">Aerial photography and videography for real estate, events, and creative projects. Drone mapping and agricultural surveys too.</p>
+    </div>
+    <div class="service-card">
+      <img class="service-img" src="https://res.cloudinary.com/dgxudtvgx/image/upload/v1741368076/4._Podcast_lhjaxc.jpg" alt="Podcast studio Pune" loading="lazy" />
+      <p class="service-num">04</p>
+      <h3 class="service-name">Podcast Studio</h3>
+      <p class="service-desc">A dedicated, acoustically set-up space for solo or multi-guest video podcasts. Professional mics, clean lighting, customisable setups.</p>
+    </div>
+    <div class="service-card">
+      <img class="service-img" src="https://res.cloudinary.com/dgxudtvgx/image/upload/v1741368075/5._Editing_c1ulpr.jpg" alt="Photo and video editing services Pune" loading="lazy" />
+      <p class="service-num">05</p>
+      <h3 class="service-name">Editing</h3>
+      <p class="service-desc">Expert colour grading, retouching, and seamless transitions — bringing the best out of your raw footage and stills.</p>
+    </div>
+    <div class="service-card">
+      <img class="service-img" src="https://res.cloudinary.com/dgxudtvgx/image/upload/v1741368415/7._Trenz_ixzlnm.jpg" alt="Studio on rent Balewadi Pune" loading="lazy" />
+      <p class="service-num">06</p>
+      <h3 class="service-name">Studio on Rent</h3>
+      <p class="service-desc">Rent the full space with all gear included — or bring your own team. Hourly and day-rate slots available. Fully air-conditioned.</p>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:3rem" class="fade-up">
+    <a href="https://wa.me/919028094087?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services" class="btn-primary" target="_blank" rel="noopener">Enquire About Pricing</a>
+  </div>
+</section>
+
+<!-- STUDIO SLIDER -->
+<section class="studio-section">
+  <div class="studio-header fade-up">
+    <p class="section-eyebrow">At Our Studio</p>
+    <h2 class="section-title">A space built<br/>for every shoot.</h2>
+  </div>
+  <div style="overflow:hidden">
+    <div class="studio-track">
+      <div class="studio-card"><img src="https://res.cloudinary.com/dgxudtvgx/image/upload/v1741368413/2._ECommerce_ibmcu6.jpg" alt="Ecommerce photography Spectra Media" loading="lazy"/><div class="studio-card-label">E-commerce Photography</div></div>
+      <div class="studio-card"><img src="https://res.cloudinary.com/dgxudtvgx/image/upload/v1741368409/3._Fashion_ithkqu.jpg" alt="Fashion photography studio Pune" loading="lazy"/><div class="studio-card-label">Fashion Photography</div></div>
+      <div class="studio-card"><img src="https://res.cloudinary.com/dgxudtvgx/image/upload/v1741368427/5._Product_Shoot_uvk4wy.jpg" alt="Product shoot Pune" loading="lazy"/><div class="studio-card-label">Product Shoot</div></div>
+      <div class="studio-card"><img src="https://res.cloudinary.com/dgxudtvgx/image/upload/v1741368415/7._Trenz_ixzlnm.jpg" alt="Trend photography Pune" loading="lazy"/><div class="studio-card-label">Trends</div></div>
+      <div class="studio-card"><img src="https://res.cloudinary.com/dgxudtvgx/image/upload/v1741368415/8._Designers_xzlbzi.jpg" alt="Designer photography Pune" loading="lazy"/><div class="studio-card-label">Designers</div></div>
+      <div class="studio-card"><img src="https://res.cloudinary.com/dgxudtvgx/image/upload/v1741368075/1._Photography_pgparr.jpg" alt="Photography Spectra Media" loading="lazy"/><div class="studio-card-label">Photography</div></div>
+      <!-- duplicate for seamless loop -->
+      <div class="studio-card"><img src="https://res.cloudinary.com/dgxudtvgx/image/upload/v1741368413/2._ECommerce_ibmcu6.jpg" alt="Ecommerce photography" loading="lazy"/><div class="studio-card-label">E-commerce Photography</div></div>
+      <div class="studio-card"><img src="https://res.cloudinary.com/dgxudtvgx/image/upload/v1741368409/3._Fashion_ithkqu.jpg" alt="Fashion photography" loading="lazy"/><div class="studio-card-label">Fashion Photography</div></div>
+      <div class="studio-card"><img src="https://res.cloudinary.com/dgxudtvgx/image/upload/v1741368427/5._Product_Shoot_uvk4wy.jpg" alt="Product shoot" loading="lazy"/><div class="studio-card-label">Product Shoot</div></div>
+      <div class="studio-card"><img src="https://res.cloudinary.com/dgxudtvgx/image/upload/v1741368415/7._Trenz_ixzlnm.jpg" alt="Trends" loading="lazy"/><div class="studio-card-label">Trends</div></div>
+      <div class="studio-card"><img src="https://res.cloudinary.com/dgxudtvgx/image/upload/v1741368415/8._Designers_xzlbzi.jpg" alt="Designers" loading="lazy"/><div class="studio-card-label">Designers</div></div>
+      <div class="studio-card"><img src="https://res.cloudinary.com/dgxudtvgx/image/upload/v1741368075/1._Photography_pgparr.jpg" alt="Photography" loading="lazy"/><div class="studio-card-label">Photography</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-grid">
+    <div class="fade-up">
+      <p class="section-eyebrow">Get in Touch</p>
+      <h2 class="section-title">Let's make<br/>something great.</h2>
+      <div class="divider"></div>
+      <p class="section-body">Whether you know exactly what you need or you're still figuring it out — just reach out. We'll take it from there.</p>
+      <div style="margin-top:2.5rem">
+        <div class="contact-detail">
+          <div class="contact-icon">📍</div>
+          <div class="contact-info">
+            <strong>Find Us</strong>
+            <span>M 1001, Park Xpress, Balewadi High St<br/>opposite Cummins Pvt Ltd, Baner, Pune 411045</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">📞</div>
+          <div class="contact-info">
+            <strong>Call or WhatsApp</strong>
+            <span><a href="tel:+919028094087" style="color:inherit;text-decoration:none">+91 90280 94087</a><br/><a href="tel:+919970944026" style="color:inherit;text-decoration:none">+91 99709 44026</a></span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-info">
+            <strong>Email</strong>
+            <span><a href="mailto:spectramediastudio@gmail.com" style="color:inherit;text-decoration:none">spectramediastudio@gmail.com</a></span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">🕐</div>
+          <div class="contact-info">
+            <strong>Hours</strong>
+            <span>Monday to Sunday, 10am to 8pm</span>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:1.5rem">
+        <a href="https://wa.me/919028094087?text=Hi%2C%20I%27d%20like%20to%20book%20a%20session%20at%20Spectra%20Media" class="btn-primary" target="_blank" rel="noopener" style="background:var(--ink);color:var(--paper)">WhatsApp Us Directly</a>
+      </div>
+    </div>
+    <div class="fade-up">
+      <form class="contact-form" onsubmit="handleForm(event)">
+        <div class="form-field">
+          <label for="name">Your Name</label>
+          <input id="name" type="text" placeholder="Rahul Sharma" required />
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone Number</label>
+          <input id="phone" type="tel" placeholder="+91 98000 00000" />
+        </div>
+        <div class="form-field">
+          <label for="service">Service Interested In</label>
+          <select id="service">
+            <option value="">Select a service</option>
+            <option>Photography</option>
+            <option>Videography</option>
+            <option>Drone Cinematography</option>
+            <option>Podcast Studio</option>
+            <option>Editing</option>
+            <option>Studio on Rent</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="message">Tell us more</label>
+          <textarea id="message" placeholder="Date, project brief, any questions..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Enquiry</button>
+        <p id="form-success" style="display:none;color:var(--teal);font-size:0.85rem;margin-top:0.5rem">Got it. We will reach out within 24 hours.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<div class="map-section">
+  <iframe
+    title="Spectra Media Studio Location Balewadi Pune"
+    src="https://maps.google.com/maps?q=Spectra+Media+Studio+Balewadi+Pune&output=embed"
+    loading="lazy"
+    allowfullscreen
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo">Spectra Media</span>
+    <ul class="footer-links">
+      <li><a href="#about">Studio</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/spectramediastudio/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">IG</a>
+      <a href="https://www.facebook.com/profile.php?id=61551817134212" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">FB</a>
+      <a href="https://www.google.com/search?q=spectra+media+studio+balewadi+pune" target="_blank" rel="noopener" class="social-link" aria-label="Google Reviews">G</a>
+    </div>
+    <p class="footer-copy">© 2025 Spectra Media Studio, Balewadi, Pune. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919028094087?text=Hi%2C%20I%27d%20like%20to%20book%20a%20session%20at%20Spectra%20Media" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </svg>
+</a>
+
+<script>
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.add('open');
+});
+document.getElementById('closeMenu').addEventListener('click', closeMob);
+function closeMob() {
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+const fadeEls = document.querySelectorAll('.fade-up');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.12 });
+fadeEls.forEach(el => observer.observe(el));
+
+function handleForm(e) {
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const service = document.getElementById('service').value;
+  const msg = document.getElementById('message').value;
+  const waText = encodeURIComponent(`Hi, I'm ${name}. I'm interested in ${service || 'your services'}. Phone: ${phone}. ${msg}`);
+  window.open(`https://wa.me/919028094087?text=${waText}`, '_blank');
+  document.getElementById('form-success').style.display = 'block';
+}
+</script>
+</body>
+</html>
